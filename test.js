@@ -3,6 +3,8 @@
 
 const test = require('tap').test;
 const typifyJSON = require('self-ref');
+const date = new Date();
+const dateStr = date.toString();
 
 test('stringify simple', function (t) {
   let str = typifyJSON.stringify({
@@ -36,20 +38,20 @@ test('stringify with space', function (t) {
 
 test('stringify date', function (t) {
   let str = typifyJSON.stringify({
-    date: new Date("Thu May 21 2015 08:00:00 GMT+0800 (CST)")
+    date: date
   });
-  t.equal(str, '{"date":new Date("Thu May 21 2015 08:00:00 GMT+0800 (CST)")}');
+  t.equal(str, `{"date":new Date("${dateStr}")}`);
   t.end()
 });
 
 test('stringify array', function (t) {
-  let str = typifyJSON.stringify([100, false, new Date('Thu May 21 2015 08:00:00 GMT+0800 (CST)')]);
-  t.equal(str, '[100,false,new Date("Thu May 21 2015 08:00:00 GMT+0800 (CST)")]');
+  let str = typifyJSON.stringify([100, false, date]);
+  t.equal(str, `[100,false,new Date("${dateStr}")]`);
   t.end();
 });
 
 test('stringify array with space', function (t) {
-  let str = typifyJSON.stringify([100, false, new Date('Thu May 21 2015 08:00:00 GMT+0800 (CST)')], null, 2);
-  t.equal(str, '[\n  100,\n  false,\n  new Date("Thu May 21 2015 08:00:00 GMT+0800 (CST)")\n]');
+  let str = typifyJSON.stringify([100, false, date], null, 2);
+  t.equal(str, `[\n  100,\n  false,\n  new Date("${dateStr}")\n]`);
   t.end();
 });
