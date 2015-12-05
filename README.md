@@ -1,4 +1,10 @@
-# Typify JSON [![Build Status](https://travis-ci.org/weflex/node-typify-json.svg)](https://travis-ci.org/weflex/node-typify-json)
+# Typify JSON
+
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Dependency Status][david-image]][david-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
 The library for serializing any JavaScript or ECMAScript object to a string which saved the types of partial
 types like `Date`.
@@ -59,3 +65,13 @@ exec(`mongo --eval '${typifyJSON.stringify(obj)}'`);
 ## License
 
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/typify-json.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/typify-json
+[travis-image]: https://img.shields.io/travis/weflex/node-typify-json.svg?style=flat-square
+[travis-url]: https://travis-ci.org/weflex/node-typify-json
+[david-image]: http://img.shields.io/david/weflex/node-typify-json.svg?style=flat-square
+[david-url]: https://david-dm.org/weflex/node-typify-json
+[license-image]: http://img.shields.io/npm/l/typify-json.svg?style=flat-square
+[downloads-image]: http://img.shields.io/npm/dm/typify-json.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/typify-json
