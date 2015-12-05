@@ -1,6 +1,6 @@
 {
   "name": "typify-json",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "serializing any JavaScript or ECMAScript object to a string which saved the types of partial types like `Date`",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/weflex/node-shell-json.git"
+    "url": "git+ssh://git@github.com/weflex/node-typify-json.git"
   },
   "keywords": [
     "json",
@@ -18,9 +18,9 @@
   "author": "Yorkie Liu <yorkiefixer@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/weflex/node-shell-json/issues"
+    "url": "https://github.com/weflex/node-typify-json/issues"
   },
-  "homepage": "https://github.com/weflex/node-shell-json#readme",
+  "homepage": "https://github.com/weflex/node-typify-json#readme",
   "devDependencies": {
     "self-ref": "^1.0.2",
     "tap": "^2.3.1"
