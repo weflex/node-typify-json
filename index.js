@@ -1,10 +1,33 @@
+'use strict';
 
-function serialize (obj) {
+function defaultReplacer (key, val) {
+  return val;
+}
+
+function stringify (obj, replacer, space) {
   let isarray = Array.isArray(obj);
   let isfirst = true;
   let str = isarray ? '[' : '{';
+  
+  // reset the replacer and space
+  replacer = replacer || defaultReplacer;
+  space = space || 0;
+  
+  // set space string
+  let lineBreakStr = '';
+  let wordBreakStr = '';
+  let endBreakStr = '';
+  if (space > 0) {
+    wordBreakStr = ' ';
+    endBreakStr = '\n';
+    for (let i = 0; i < space; i++) {
+      lineBreakStr += ' ';
+    }
+    lineBreakStr = '\n' + lineBreakStr;
+  }
+
   let set = (key, val) => {
-    str += isarray ? val : `"${key}":${val}`;
+    str += lineBreakStr + (isarray ? val : `"${key}":${wordBreakStr}${val}`);
   };
   for (let key in obj) {
     if (!isfirst) {
@@ -12,7 +35,7 @@ function serialize (obj) {
     } else {
       isfirst = false;
     }
-    let val = obj[key];
+    let val = replacer(key, obj[key]);
     if (typeof val === 'string') {
       set(key, `"${val}"`);
     } else if (typeof val === 'number' || typeof val === 'boolean') {
@@ -20,10 +43,16 @@ function serialize (obj) {
     } else if (val instanceof Date) {
       set(key, `new Date("${val}")`);
     } else if (typeof val === 'object') {
-      set(key, serialize(val));
+      set(key, stringify(val, replacer, space));
     }
   }
-  return str + (isarray ? ']' : '}');
+  return str + endBreakStr + (isarray ? ']' : '}');
 }
 
-module.exports = serialize;
+function parse (str) {
+  // TODO(Yorkie): not implemented
+  console.warn('not implemented');
+}
+
+exports.stringify = stringify;
+exports.parse = parse;

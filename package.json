@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/weflex/node-shell-json/issues"
   },
-  "homepage": "https://github.com/weflex/node-shell-json#readme"
+  "homepage": "https://github.com/weflex/node-shell-json#readme",
+  "devDependencies": {
+    "self-ref": "^1.0.2",
+    "tap": "^2.3.1"
+  }
 }
