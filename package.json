@@ -1,6 +1,6 @@
 {
   "name": "typify-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "serializing any JavaScript or ECMAScript object to a string which saved the types of partial types like `Date`",
   "main": "index.js",
   "scripts": {
