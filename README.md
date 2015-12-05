@@ -1,4 +1,4 @@
-# Typify JSON
+# Typify JSON [![Build Status](https://travis-ci.org/weflex/node-typify-json.svg)](https://travis-ci.org/weflex/node-typify-json)
 
 The library for serializing any JavaScript or ECMAScript object to a string which saved the types of partial
 types like `Date`.
