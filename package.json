@@ -1,7 +1,7 @@
 {
   "name": "typify-json",
   "version": "1.0.0",
-  "description": "convert any JavaScript Object to JSON in shell",
+  "description": "serializing any JavaScript or ECMAScript object to a string which saved the types of partial types like `Date`",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
