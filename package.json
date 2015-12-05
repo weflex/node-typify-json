@@ -1,0 +1,24 @@
+{
+  "name": "typify-json",
+  "version": "1.0.0",
+  "description": "convert any JavaScript Object to JSON in shell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weflex/node-shell-json.git"
+  },
+  "keywords": [
+    "json",
+    "shell",
+    "serialization"
+  ],
+  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weflex/node-shell-json/issues"
+  },
+  "homepage": "https://github.com/weflex/node-shell-json#readme"
+}
