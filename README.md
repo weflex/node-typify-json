@@ -33,7 +33,7 @@ Then you will get the following result:
 
 ### Work together with mongo shell
 
-```
+```js
 const typifyJSON = require('typify-json');
 const exec = require('child_process').execSync;
 
