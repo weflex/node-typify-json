@@ -40,6 +40,8 @@ function stringify (obj, replacer, space) {
       set(key, `"${val}"`);
     } else if (typeof val === 'number' || typeof val === 'boolean') {
       set(key, val);
+    } else if (val === null) {
+      set(key, 'null');
     } else if (val instanceof Date) {
       set(key, `new Date("${val}")`);
     } else if (typeof val === 'object') {

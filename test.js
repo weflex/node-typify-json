@@ -55,3 +55,9 @@ test('stringify array with space', function (t) {
   t.equal(str, `[\n  100,\n  false,\n  new Date("${dateStr}")\n]`);
   t.end();
 });
+
+test('stringify null', function (t) {
+  let str = typifyJSON.stringify({foo: null});
+  t.equal(str, '{"foo":null}');
+  t.end();
+});
