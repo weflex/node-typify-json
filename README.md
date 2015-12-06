@@ -1,5 +1,4 @@
 # Typify JSON
-
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 [![Dependency Status][david-image]][david-url]
@@ -58,6 +57,7 @@ exec(`mongo --eval '${typifyJSON.stringify(obj)}'`);
   - [x] Date
   - [x] Object
   - [x] Array
+  - [x] Null
   - [ ] ObjectId
 - [ ] `TypifyJSON.parse(str)`
 
