@@ -26,7 +26,7 @@ function stringify (obj, replacer, space) {
     lineBreakStr = '\n' + lineBreakStr;
   }
 
-  let set = (key, val) => {
+  let set = function (key, val) {
     str += lineBreakStr + (isarray ? val : `"${key}":${wordBreakStr}${val}`);
   };
   for (let key in obj) {
